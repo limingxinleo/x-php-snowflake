@@ -41,7 +41,7 @@ abstract class Client implements ClientInterface
         if (isset($this->beginAt) && is_numeric($this->beginAt)) {
             return $this->beginAt;
         }
-        // return 0;
+
         return strtotime('2017-01-01') * 1000;
     }
 
