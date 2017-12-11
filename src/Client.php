@@ -31,7 +31,7 @@ abstract class Client implements ClientInterface
     }
 
     /**
-     * @desc   返回起始时间 毫秒
+     * @desc   返回起始时间 秒
      * @author limx
      * @return int
      * @throws SnowflakeException
@@ -42,7 +42,7 @@ abstract class Client implements ClientInterface
             return $this->beginAt;
         }
 
-        return strtotime('2017-01-01') * 1000;
+        return strtotime('2017-01-01');
     }
 
     /**
@@ -65,7 +65,7 @@ abstract class Client implements ClientInterface
         $time = $this->getBeginAt();
 
         if (!isset($currentTime)) {
-            $currentTime = intval(microtime(true) * 1000);
+            $currentTime = time();
         }
 
         $bit1 = str_pad(decbin($currentTime - $time), 41, '0', STR_PAD_LEFT);
