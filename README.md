@@ -19,7 +19,7 @@ class Test extends Client
 {
     public function getBeginAt()
     {
-        return strtotime('2017-01-01') * 1000;
+        return strtotime('2017-01-01');
     }
 }
 ~~~
@@ -30,6 +30,3 @@ class Test extends Client
 
 $id = Test::getInstance()->id(1, 1);
 ~~~
-
-## 使用年限
-默认情况下有41个bit可以供使用，那么一共有T（1llu << 41）毫秒供你使用分配，年份 = T / (3600 * 24 * 365 * 1000) = 69.7年

@@ -7,6 +7,7 @@
 // | Author: limx <715557344@qq.com> <https://github.com/limingxinleo>
 // +----------------------------------------------------------------------
 namespace Xin\Snowflake;
+
 interface ClientInterface
 {
     public static function getInstance();

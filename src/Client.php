@@ -14,7 +14,7 @@ abstract class Client implements ClientInterface
 {
     protected static $_instance;
 
-    /** @var  integer 毫秒 */
+    /** @var  integer 秒 */
     protected $beginAt;
 
     private function __construct()
